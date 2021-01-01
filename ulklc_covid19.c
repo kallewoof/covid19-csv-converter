@@ -4,7 +4,7 @@
 // 2020/01/22,QA,Qatar,Asia,25.5,51.25,0,0,0
 
 void ulklc_write_dataset_raw(FILE* write_fp, Dataset ds) {
-    for (size_t i = 0; i < 625; ++i) {
+    for (size_t i = 0; i < COUNTRY_LIMIT; ++i) {
         Country c = ds->country[i];
         if (!c) continue;
         char fmt[1024];
