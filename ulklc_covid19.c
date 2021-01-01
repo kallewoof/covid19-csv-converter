@@ -28,6 +28,7 @@ void ulklc_read_dataset_raw(FILE* read_fp, Dataset ds) {
         VList vl = VListReadCSV(read_fp);
         if (vl->vcount == 0) {
             // we're done
+            VListDone(vl);
             return;
         }
         if (9 != vl->vcount) {
